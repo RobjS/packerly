@@ -11,5 +11,6 @@
 
 require_once('packerly_posts.php');
 require_once('packerly_taxonomies.php'); 
+require_once('packerly_search.php');
 
 ?>

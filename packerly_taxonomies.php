@@ -9,7 +9,6 @@ class PackerlyTaxonomies
 		 	
 	public function create_climate_budget_taxonomy() 
 	{
-		// Add new taxonomy, make it hierarchical (like categories)
 		$labels = array(
 			'name'              => _x('Climate/budget', 'taxonomy general name'),
 			'singular_name'     => _x('Climate/budget', 'taxonomy singular name'),
@@ -31,7 +30,7 @@ class PackerlyTaxonomies
 			'query_var'         => true,
 			'rewrite'           => array('slug' => 'climate-budget'),
 		);
-		register_taxonomy('climate-budget', array('clothing'), $args);
+		register_taxonomy('climate-budget', array('clothing', 'electricalitems', 'careitems'), $args);
 	}
 	
 	public function create_gender_taxonomy() 
@@ -54,7 +53,7 @@ class PackerlyTaxonomies
 			'query_var'         => true,
 			'rewrite'           => array('slug' => 'gender'),
 		);
-		register_taxonomy('gender', array('clothing'), $args);
+		register_taxonomy('gender', array('clothing', 'electricalitems', 'careitems'), $args);
 	}
 }
  
